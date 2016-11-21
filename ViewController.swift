@@ -41,10 +41,12 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = UITableViewCell()
-        let label = UILabel(frame: CGRect(x: 10, y: 1/3 * tableView.rowHeight, width: 100, height: tableView.rowHeight))
-        label.text = "\(indexPath.row)"
-        cell.addSubview(label)
+        let identifer:String = "tableviewcell"
+        
+        tableView.register(UINib(nibName: identifer, bundle: nil), forCellReuseIdentifier: identifer)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifer) as! myTableViewCell
+    
+        cell.title.text = "\(indexPath.row)"
         return cell
     }
     

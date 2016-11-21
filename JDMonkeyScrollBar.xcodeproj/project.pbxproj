@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F26ABBE1DE328F3007B89AC /* tableviewcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F26ABBD1DE328F3007B89AC /* tableviewcell.xib */; };
+		4F26ABC01DE329C3007B89AC /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F26ABBF1DE329C3007B89AC /* myTableViewCell.swift */; };
 		6BDB68A81DE28DF2003266DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A51DE28DF2003266DD /* AppDelegate.swift */; };
 		6BDB68A91DE28DF2003266DD /* JDMonkeyScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A61DE28DF2003266DD /* JDMonkeyScrollBar.swift */; };
 		6BDB68AA1DE28DF2003266DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A71DE28DF2003266DD /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F26ABBD1DE328F3007B89AC /* tableviewcell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tableviewcell.xib; sourceTree = SOURCE_ROOT; };
+		4F26ABBF1DE329C3007B89AC /* myTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		6B30CA1B1DDEA909008EA63E /* JDMonkeyScrollBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDMonkeyScrollBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BDB68A51DE28DF2003266DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		6BDB68A61DE28DF2003266DD /* JDMonkeyScrollBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDMonkeyScrollBar.swift; sourceTree = SOURCE_ROOT; };
@@ -63,6 +67,8 @@
 				6BDB68A51DE28DF2003266DD /* AppDelegate.swift */,
 				6BDB68A71DE28DF2003266DD /* ViewController.swift */,
 				6B5D46021DDEB1590041E78A /* JDMonkeyScrollBar */,
+				4F26ABBD1DE328F3007B89AC /* tableviewcell.xib */,
+				4F26ABBF1DE329C3007B89AC /* myTableViewCell.swift */,
 			);
 			path = JDMonkeyScrollBar;
 			sourceTree = "<group>";
@@ -136,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BDB68B41DE28EF2003266DD /* Main.storyboard in Resources */,
+				4F26ABBE1DE328F3007B89AC /* tableviewcell.xib in Resources */,
 				6BDB68AE1DE28EE0003266DD /* Assets.xcassets in Resources */,
 				6BDB68B31DE28EF2003266DD /* LaunchScreen.storyboard in Resources */,
 			);
@@ -149,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BDB68AA1DE28DF2003266DD /* ViewController.swift in Sources */,
+				4F26ABC01DE329C3007B89AC /* myTableViewCell.swift in Sources */,
 				6BDB68A81DE28DF2003266DD /* AppDelegate.swift in Sources */,
 				6BDB68A91DE28DF2003266DD /* JDMonkeyScrollBar.swift in Sources */,
 			);
