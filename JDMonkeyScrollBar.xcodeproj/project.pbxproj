@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B30CA1F1DDEA909008EA63E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30CA1E1DDEA909008EA63E /* AppDelegate.swift */; };
-		6B30CA211DDEA909008EA63E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30CA201DDEA909008EA63E /* ViewController.swift */; };
-		6B30CA241DDEA909008EA63E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B30CA221DDEA909008EA63E /* Main.storyboard */; };
-		6B30CA261DDEA909008EA63E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B30CA251DDEA909008EA63E /* Assets.xcassets */; };
-		6B30CA291DDEA909008EA63E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B30CA271DDEA909008EA63E /* LaunchScreen.storyboard */; };
-		6B5D46041DDEB29F0041E78A /* JDMonkeyScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5D46031DDEB29F0041E78A /* JDMonkeyScrollBar.swift */; };
+		6BDB68A81DE28DF2003266DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A51DE28DF2003266DD /* AppDelegate.swift */; };
+		6BDB68A91DE28DF2003266DD /* JDMonkeyScrollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A61DE28DF2003266DD /* JDMonkeyScrollBar.swift */; };
+		6BDB68AA1DE28DF2003266DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB68A71DE28DF2003266DD /* ViewController.swift */; };
+		6BDB68AE1DE28EE0003266DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB68AD1DE28EE0003266DD /* Assets.xcassets */; };
+		6BDB68B31DE28EF2003266DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB68AF1DE28EF2003266DD /* LaunchScreen.storyboard */; };
+		6BDB68B41DE28EF2003266DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDB68B11DE28EF2003266DD /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B30CA1B1DDEA909008EA63E /* JDMonkeyScrollBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDMonkeyScrollBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B30CA1E1DDEA909008EA63E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B30CA201DDEA909008EA63E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6B30CA231DDEA909008EA63E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6B30CA251DDEA909008EA63E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6B30CA281DDEA909008EA63E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B30CA2A1DDEA909008EA63E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B5D46031DDEB29F0041E78A /* JDMonkeyScrollBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDMonkeyScrollBar.swift; sourceTree = "<group>"; };
+		6BDB68A51DE28DF2003266DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		6BDB68A61DE28DF2003266DD /* JDMonkeyScrollBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDMonkeyScrollBar.swift; sourceTree = SOURCE_ROOT; };
+		6BDB68A71DE28DF2003266DD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = SOURCE_ROOT; };
+		6BDB68AD1DE28EE0003266DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		6BDB68B01DE28EF2003266DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		6BDB68B21DE28EF2003266DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		6BDB68BB1DE28FB7003266DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +56,13 @@
 		6B30CA1D1DDEA909008EA63E /* JDMonkeyScrollBar */ = {
 			isa = PBXGroup;
 			children = (
+				6BDB68BB1DE28FB7003266DD /* Info.plist */,
+				6BDB68AF1DE28EF2003266DD /* LaunchScreen.storyboard */,
+				6BDB68B11DE28EF2003266DD /* Main.storyboard */,
+				6BDB68AD1DE28EE0003266DD /* Assets.xcassets */,
+				6BDB68A51DE28DF2003266DD /* AppDelegate.swift */,
+				6BDB68A71DE28DF2003266DD /* ViewController.swift */,
 				6B5D46021DDEB1590041E78A /* JDMonkeyScrollBar */,
-				6B30CA1E1DDEA909008EA63E /* AppDelegate.swift */,
-				6B30CA201DDEA909008EA63E /* ViewController.swift */,
-				6B30CA221DDEA909008EA63E /* Main.storyboard */,
-				6B30CA251DDEA909008EA63E /* Assets.xcassets */,
-				6B30CA271DDEA909008EA63E /* LaunchScreen.storyboard */,
-				6B30CA2A1DDEA909008EA63E /* Info.plist */,
 			);
 			path = JDMonkeyScrollBar;
 			sourceTree = "<group>";
@@ -70,7 +70,7 @@
 		6B5D46021DDEB1590041E78A /* JDMonkeyScrollBar */ = {
 			isa = PBXGroup;
 			children = (
-				6B5D46031DDEB29F0041E78A /* JDMonkeyScrollBar.swift */,
+				6BDB68A61DE28DF2003266DD /* JDMonkeyScrollBar.swift */,
 			);
 			name = JDMonkeyScrollBar;
 			sourceTree = "<group>";
@@ -107,6 +107,7 @@
 				TargetAttributes = {
 					6B30CA1A1DDEA909008EA63E = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,9 +135,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B30CA291DDEA909008EA63E /* LaunchScreen.storyboard in Resources */,
-				6B30CA261DDEA909008EA63E /* Assets.xcassets in Resources */,
-				6B30CA241DDEA909008EA63E /* Main.storyboard in Resources */,
+				6BDB68B41DE28EF2003266DD /* Main.storyboard in Resources */,
+				6BDB68AE1DE28EE0003266DD /* Assets.xcassets in Resources */,
+				6BDB68B31DE28EF2003266DD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,29 +148,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B5D46041DDEB29F0041E78A /* JDMonkeyScrollBar.swift in Sources */,
-				6B30CA211DDEA909008EA63E /* ViewController.swift in Sources */,
-				6B30CA1F1DDEA909008EA63E /* AppDelegate.swift in Sources */,
+				6BDB68AA1DE28DF2003266DD /* ViewController.swift in Sources */,
+				6BDB68A81DE28DF2003266DD /* AppDelegate.swift in Sources */,
+				6BDB68A91DE28DF2003266DD /* JDMonkeyScrollBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6B30CA221DDEA909008EA63E /* Main.storyboard */ = {
+		6BDB68AF1DE28EF2003266DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B30CA231DDEA909008EA63E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6B30CA271DDEA909008EA63E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B30CA281DDEA909008EA63E /* Base */,
+				6BDB68B01DE28EF2003266DD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6BDB68B11DE28EF2003266DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BDB68B21DE28EF2003266DD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,10 +273,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JDMonkeyScrollBar/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDMonkeyScrollBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -284,7 +288,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = JDMonkeyScrollBar/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.JDMonkeyScrollBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";

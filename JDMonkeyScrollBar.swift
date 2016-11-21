@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class JDMonkeyScrollBar:UIView
+class JDMonkeyScrollBar
 {
     var scrollview:UIScrollView!
     var scrollBarview:JDMonkeyScrollBarView!
@@ -18,12 +18,11 @@ class JDMonkeyScrollBar:UIView
     
     init(scrollview:UIScrollView)
     {
-        super.init(frame:scrollview.frame)
         self.scrollview = scrollview
         self.scrollview.showsVerticalScrollIndicator = false
         
-        delegte = JDMonkeyScrollBarDelegate(contentheight: self.scrollview.contentSize.height)
-        self.scrollview.delegate = delegte
+        delegte = JDMonkeyScrollBarDelegate(contentheight: self.scrollview.contentSize.height,scroll: self.scrollview)
+        self.scrollview.addObserver(delegte, forKeyPath: "contentOffset", options: .new, context: nil)
         
         let scrollbarviewframe:CGRect = CGRect(x: self.scrollview.frame.origin.x + self.scrollview.frame.width * 9.2/10, y: self.scrollview.frame.origin.y, width: 0.6/10 * self.scrollview.frame.width, height: self.scrollview.frame.height)
         scrollBarview = JDMonkeyScrollBarView(frame: scrollbarviewframe)
@@ -32,32 +31,42 @@ class JDMonkeyScrollBar:UIView
         self.delegte.monkeyview = scrollBarview
     }
     
+    
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
  
 }
 
-class JDMonkeyScrollBarDelegate:NSObject,UIScrollViewDelegate
+class JDMonkeyScrollBarDelegate:NSObject
 {
     var scrollViewContentHeight:CGFloat = 0.0
     var monkeyview:monkeydelegate?
+    var scrollView:UIScrollView?
     
-    override init() {
+    init(contentheight:CGFloat,scroll:UIScrollView) {
         super.init()
-        
-    }
-    
-    init(contentheight:CGFloat) {
+        scrollView = scroll
         scrollViewContentHeight = contentheight
     }
     
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView){
-        let contentoffsety = scrollView.contentOffset.y
-        let ratio = contentoffsety / scrollViewContentHeight
+    func scrollViewDidScroll(){
+        let contentoffsety = scrollView?.contentOffset.y
+        let ratio = contentoffsety! / scrollViewContentHeight
         monkeyview?.climbingto(y: ratio)
     }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if (keyPath == "contentOffset") {
+          scrollViewDidScroll()
+        }
+    }
+    
+    
+    
 }
 
 protocol monkeydelegate {
@@ -87,11 +96,35 @@ class JDMonkeyScrollBarView:UIView,monkeydelegate
     
     func climbingto(y:CGFloat)
     {
-        monkey_img?.frame.origin.y = self.frame.height * y
+       UIView.animate(withDuration: 0.2, animations: {
+        let new_y = self.frame.height * y
+        
+        //self.monkey_img!.frame.origin.y = new_y
+        self.monkey_img!.center.y = new_y
+        
+            }, completion:  { b in
+             var rotating_angle:CGFloat = 0.0
+             if(y < 0.5)
+             {
+               rotating_angle = CGFloat(-0.25*M_PI) + (2*y)*CGFloat(0.5*M_PI)
+             }
+             else
+             {
+                rotating_angle = CGFloat(0.25*M_PI) - (2*y - 1.0)*CGFloat(0.5*M_PI)
+             }
+                
+             var climbing2 = CGAffineTransform.identity
+             climbing2 = CGAffineTransform(rotationAngle: rotating_angle);
+             self.monkey_img!.transform = climbing2
+        })
+    
+    
     }
     
     
-    required init?(coder aDecoder: NSCoder) {
+    
+    
+       required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
