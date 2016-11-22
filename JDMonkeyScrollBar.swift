@@ -24,7 +24,7 @@ class JDMonkeyScrollBar
         delegte = JDMonkeyScrollBarDelegate(contentheight: self.scrollview.contentSize.height,scroll: self.scrollview)
         self.scrollview.addObserver(delegte, forKeyPath: "contentOffset", options: .new, context: nil)
         
-        let scrollbarviewframe:CGRect = CGRect(x: self.scrollview.frame.origin.x + self.scrollview.frame.width * 9.2/10, y: self.scrollview.frame.origin.y, width: 0.6/10 * self.scrollview.frame.width, height: self.scrollview.frame.height)
+        let scrollbarviewframe:CGRect = CGRect(x: self.scrollview.frame.origin.x + self.scrollview.frame.width * 9.3/10, y: self.scrollview.frame.origin.y, width: 0.6/10 * self.scrollview.frame.width, height: self.scrollview.frame.height)
         scrollBarview = JDMonkeyScrollBarView(frame: scrollbarviewframe)
         self.scrollview.superview?.addSubview(scrollBarview)
 
@@ -39,6 +39,8 @@ class JDMonkeyScrollBar
     }
  
 }
+
+
 
 class JDMonkeyScrollBarDelegate:NSObject
 {
@@ -104,13 +106,21 @@ class JDMonkeyScrollBarView:UIView,monkeydelegate
         
             }, completion:  { b in
              var rotating_angle:CGFloat = 0.0
-             if(y < 0.5)
+                
+          
+             if(y < 0.25)
              {
-               rotating_angle = CGFloat(-0.25*M_PI) + (2*y)*CGFloat(0.5*M_PI)
+               rotating_angle = CGFloat(-0.25*M_PI) + 4*(y)*CGFloat(0.5*M_PI)
+             }
+             else if((y > 0.25) && (y < 0.5)){
+               rotating_angle = CGFloat(0.25*M_PI) - 4*(y - 0.25)*CGFloat(0.5*M_PI)
+             }
+             else if((y > 0.5) && (y < 0.75)){
+                rotating_angle = CGFloat(-0.25*M_PI) + 4*(y - 0.5)*CGFloat(0.5*M_PI)
              }
              else
              {
-                rotating_angle = CGFloat(0.25*M_PI) - (2*y - 1.0)*CGFloat(0.5*M_PI)
+                rotating_angle = CGFloat(0.25*M_PI) - 4*(y - 0.75)*CGFloat(0.5*M_PI)
              }
                 
              var climbing2 = CGAffineTransform.identity
@@ -137,7 +147,10 @@ class JDMonkeyLadder:CAShapeLayer
     init(frame:CGRect) {
         super.init()
         self.frame = frame
-        self.strokeColor = UIColor.brown.cgColor
+        var color = UIColor.black
+        color = color.withAlphaComponent(0.8)
+        self.strokeColor = color.cgColor
+        self.lineWidth = 0.5
         self.fillColor = UIColor.clear.cgColor
         height = frame.height
         width = frame.width
@@ -147,7 +160,6 @@ class JDMonkeyLadder:CAShapeLayer
     func drawLadder()
     {
         let ladder_path = UIBezierPath()
-        ladder_path.lineWidth = 1.5
         ladder_path.move(to: CGPoint(x: 0.0, y: 0.0))
         ladder_path.addLine(to: CGPoint(x:0.0, y:height))
         ladder_path.addLine(to: CGPoint(x:width,y:height))
