@@ -41,8 +41,8 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let cell = UITableViewCell()
-        let label = UILabel(frame: CGRect(x: 10, y: 1/3 * tableView.rowHeight, width: 100, height: tableView.rowHeight))
+        let cell = UITableViewCell(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.rowHeight))
+        let label = UILabel(frame: CGRect(x: 10, y: 0, width: 100, height: tableView.rowHeight))
         label.text = "\(indexPath.row)"
         cell.addSubview(label)
         return cell
